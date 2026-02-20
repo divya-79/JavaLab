@@ -35,3 +35,4 @@ public class greetings{
     }
 }
 ```
+<img width="721" height="227" alt="image" src="https://github.com/user-attachments/assets/93a81de8-eafc-47cb-86d1-771673e77421" />
