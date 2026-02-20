@@ -28,4 +28,10 @@ public class cla {
 }# JavaLab
 ```
 <img width="721" height="227" alt="image" src="https://github.com/user-attachments/assets/b8210a15-565e-4345-a73c-59ba3e7a4a1c" />
-
+```
+public class greetings{
+    public static void main(String[]args){
+            System.out.print('hello world');
+    }
+}
+```
