@@ -1,4 +1,5 @@
 [Program-1 WAP TO DEMONSTRATE COMMAND LINE ARGUMENT](#ASSI-1)
+[Program-2 WAP TO DEMONSTRATE HELLO-WORLD](#ASSI-2)
 ## ASSI-1
 ```
 public class cla {
@@ -31,6 +32,7 @@ public class cla {
 ```
 <img width="721" height="227" alt="image" src="https://github.com/user-attachments/assets/b8210a15-565e-4345-a73c-59ba3e7a4a1c" />
 
+## ASSI-2
 ```
 public class greetings{
     public static void main(String[]args){
