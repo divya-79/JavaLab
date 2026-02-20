@@ -1,3 +1,4 @@
+```
 public class cla {
     static int add(int num1, int num2) { // num1,num2 are integers to add
         return num1 + num2;
@@ -25,3 +26,4 @@ public class cla {
 
     }
 }# JavaLab
+```
