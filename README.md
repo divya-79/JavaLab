@@ -8,6 +8,9 @@
 
 [Program-5 WAP for the addition of two times where each time is given in hour and minute using object and classes.](#ASSI-5)
 
+[Program-6 WAP for the addition of two distances where each distance is given in meter and centimeter using object and classes.](#ASSI-6)
+
+
 
 ## ASSI-1
 
@@ -186,6 +189,44 @@ public class AddTime {
 }
 ```
 <img width="523" height="82" alt="image" src="https://github.com/user-attachments/assets/a997feb8-878a-4fff-b983-c9b6988fc60b" />
+
+## ASSI-6
+```
+public class AddDis {
+    int m, cm; // initialising
+
+    AddDis(int meter, int centimeter) { // constructor
+        m = meter;
+        cm = centimeter;
+    }
+
+    static AddDis add(AddDis d1, AddDis d2) { // add function
+        int m = d1.m + d2.m;
+        int cm = d1.cm + d2.cm;
+
+        // convert cm to m
+        m = m + (cm / 100);
+        cm = cm % 100;
+
+        return new AddDis(m, cm);
+    }
+
+    void display() {
+        System.out.println(m + " m " + cm + " cm ");
+    }
+
+    public static void main(String[] args) {
+
+        AddDis d1 = new AddDis(200, 20);
+        AddDis d2 = new AddDis(200, 56);
+
+        AddDis result = AddDis.add(d1, d2);
+
+        System.out.print("Total Distance: ");
+        result.display();
+    }
+}
+```
 
 
 
