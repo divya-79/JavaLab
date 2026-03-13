@@ -5,6 +5,10 @@
 [Program-3 WAP for the addition of two distances where each distance is given in meter,centimeter and millilmeter using object and classes.](#ASSI-3)
 
 [Program-4 WAP for the addition of two times where each time is given in hour,minute and second using object and classes.](#ASSI-4)
+
+[Program-5 WAP for the addition of two times where each time is given in hour and minute using object and classes.](#ASSI-5)
+
+
 ## ASSI-1
 
 ```
@@ -140,5 +144,46 @@ public class AddTime {
 }
 ```
 <img width="506" height="126" alt="image" src="https://github.com/user-attachments/assets/981f53be-5f0b-49b9-aa1a-30b078a6333d" />
+
+## ASSI-5
+```
+public class AddTime {
+    int hr, min; // variables
+
+    // constructor
+    AddTime(int hour, int minute) {
+        hr = hour;
+        min = minute;
+    }
+
+    // add function
+    static AddTime add(AddTime t1, AddTime t2) {
+        int hr = t1.hr + t2.hr;
+        int min = t1.min + t2.min;
+
+        // convert minutes to hours
+        hr = hr + (min / 60);
+        min = min % 60;
+
+        return new AddTime(hr, min);
+    }
+
+    // display method
+    void display() {
+        System.out.println(hr + " hr " + min + " min");
+    }
+
+    public static void main(String[] args) {
+
+        AddTime t1 = new AddTime(2, 45);
+        AddTime t2 = new AddTime(1, 30);
+
+        AddTime result = AddTime.add(t1, t2);
+
+        System.out.print("Total Time: ");
+        result.display();
+    }
+}
+```
 
 
