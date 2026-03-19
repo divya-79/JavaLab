@@ -10,6 +10,8 @@
 
 [Program-6 WAP for the addition of two distances where each distance is given in meter and centimeter using object and classes.](#ASSI-6)
 [Program-7 WAP using objects and classes to do reverse of 1-D Array](#ASSI-7)
+[Program-8 Write a class for implementation operation of matrix(3x3):  1.Transpose, 2.Sum, 3.Multiply, 4.Sum of Rows, 5.Sum of Column, 6.Sum of diagonal] (#ASSI-8)
+
 
 
 
@@ -278,6 +280,141 @@ class ArrayOperations {
 
 ```
 <img width="531" height="102" alt="image" src="https://github.com/user-attachments/assets/76e80c6a-185e-4cf3-ad4a-9936c14596b9" />
+
+## ASSI-8
+```
+// Class containing all matrix operations
+class MatrixOperations {
+    
+    int[][] A = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    int[][] B = {
+        {9, 8, 7},
+        {6, 5, 4},
+        {3, 2, 1}
+    };
+
+    // Display matrix
+    void display(int[][] M) {
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                System.out.print(M[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // 1. Transpose
+    void transpose() {
+        int[][] T = new int[3][3];
+        
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                T[j][i] = A[i][j];
+            }
+        }
+
+        System.out.println("Transpose of Matrix A ");
+        display(T);
+    }
+
+    // 2. Sum of two matrices
+    void sum() {
+        int[][] S = new int[3][3];
+        
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                S[i][j] = A[i][j] + B[i][j];
+            }
+        }
+
+        System.out.println("Sum of A and B ");
+        display(S);
+    }
+
+    // 3. Multiplication
+    void multiply() {
+        int[][] M = new int[3][3];
+        
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                M[i][j] = 0;
+                for(int k = 0; k < 3; k++) {
+                    M[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+
+        System.out.println("Multiplication of A and B ");
+        display(M);
+    }
+
+    // 4. Sum of rows
+    void rowSum() {
+        System.out.println("Row sums of Matrix A:");
+        
+        for(int i = 0; i < 3; i++) {
+            int sum = 0;
+            for(int j = 0; j < 3; j++) {
+                sum += A[i][j];
+            }
+            System.out.println("Row " + (i+1) + " sum = " + sum);
+        }
+    }
+
+    // 5. Sum of columns
+    void columnSum() {
+        System.out.println("Column sums of Matrix A:");
+        
+        for(int j = 0; j < 3; j++) {
+            int sum = 0;
+            for(int i = 0; i < 3; i++) {
+                sum += A[i][j];
+            }
+            System.out.println("Column " + (j+1) + " sum = " + sum);
+        }
+    }
+    // 6. Sum of diagonals
+void diagonalSum() {
+    int primary = 0, secondary = 0;
+    
+    for(int i = 0; i < 3; i++) {
+        primary += A[i][i];           // main diagonal
+        secondary += A[i][2 - i];     // secondary diagonal
+    }
+
+    System.out.println("Primary Diagonal Sum = " + primary);
+    System.out.println("Secondary Diagonal Sum = " + secondary);
+}
+}
+
+// Main class
+public class MainClass {
+    public static void main(String[] args) {
+        
+        MatrixOperations obj = new MatrixOperations();
+
+        System.out.println("Matrix A:");
+        obj.display(obj.A);
+
+        System.out.println("Matrix B:");
+        obj.display(obj.B);
+
+        obj.transpose();
+        obj.sum();
+        obj.multiply();
+        obj.rowSum();
+        obj.columnSum();
+        obj.diagonalSum();
+    }
+}
+```
+<img width="835" height="720" alt="image" src="https://github.com/user-attachments/assets/af64df54-1337-45a1-a997-7f0088bfe9bc" />
+
 
 
 
