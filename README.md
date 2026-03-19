@@ -16,6 +16,8 @@
 
 [Program-9  Collect the code of C language for any 5 operation ,convert the logic to java in object orented fashion](#ASSI-9)
 
+[Program-10 Demonstrate all 3 types of inheritance 1. Single, 2. Multilevel, 3. Hierarchial](#ASSI-10)
+
 
 
 ## ASSI-1
@@ -513,6 +515,76 @@ public class MainClass {
     }
 }
 ```
+<img width="584" height="263" alt="image" src="https://github.com/user-attachments/assets/0f6a3ab2-206e-44bf-9f12-d263aaaf4b65" />
+
+## ASSI-10
+```
+// Base class
+class A {
+    void showA() {
+        System.out.println("Class A (Parent)");
+    }
+}
+
+// Single Inheritance 
+class B extends A {
+    void showB() {
+        System.out.println("Class B (Child of A)");
+    }
+}
+
+// Multilevel Inheritance
+class C extends B {
+    void showC() {
+        System.out.println("Class C (Child of B)");
+    }
+}
+
+// Hierarchical Inheritance
+class D extends A {
+    void showD() {
+        System.out.println("Class D (Another Child of A)");
+    }
+}
+
+class E extends A {
+    void showE() {
+        System.out.println("Class E (Another Child of A)");
+    }
+}
+
+// Main class
+public class MainClass {
+    public static void main(String[] args) {
+
+        // Single Inheritance
+        System.out.println("Single Inheritance:");
+        B obj1 = new B();
+        obj1.showA();
+        obj1.showB();
+
+        // Multilevel Inheritance
+        System.out.println("\nMultilevel Inheritance:");
+        C obj2 = new C();
+        obj2.showA();
+        obj2.showB();
+        obj2.showC();
+
+        // Hierarchical Inheritance
+        System.out.println("\nHierarchical Inheritance:");
+        D obj3 = new D();
+        E obj4 = new E();
+
+        obj3.showA();
+        obj3.showD();
+
+        obj4.showA();
+        obj4.showE();
+    }
+}
+```
+<img width="701" height="434" alt="image" src="https://github.com/user-attachments/assets/aaab1d2c-b7e2-4a64-8352-3abfbf3c599d" />
+
 
 
 
