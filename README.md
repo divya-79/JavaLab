@@ -9,6 +9,7 @@
 [Program-5 WAP for the addition of two times where each time is given in hour and minute using object and classes.](#ASSI-5)
 
 [Program-6 WAP for the addition of two distances where each distance is given in meter and centimeter using object and classes.](#ASSI-6)
+[Program-7 WAP using objects and classes to do reverse of 1-D Array](#ASSI-7)
 
 
 
@@ -228,6 +229,56 @@ public class AddDis {
 }
 ```
 <img width="548" height="81" alt="image" src="https://github.com/user-attachments/assets/b4677f61-2a88-4f25-a84e-5c3d41f99947" />
+
+
+## ASSI-7
+```
+// Main class
+public class MainClass {
+    public static void main(String[] args) {
+        
+        ArrayOperations obj = new ArrayOperations();
+        
+        System.out.println("Original Array:");
+        obj.displayArray();
+        
+        obj.reverseArray();
+        
+        System.out.println("Reversed Array:");
+        obj.displayArray();
+    }
+}
+// Class containing all functions
+class ArrayOperations {
+    
+    int[] arr = {10, 20, 30, 40, 50};  // predefined array
+
+    // Method to reverse array
+    void reverseArray() {
+        int start = 0, end = arr.length - 1;
+        
+        while(start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            
+            start++;
+            end--;
+        }
+    }
+
+    // Method to display array
+    void displayArray() {
+        for(int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+```
+<img width="531" height="102" alt="image" src="https://github.com/user-attachments/assets/76e80c6a-185e-4cf3-ad4a-9936c14596b9" />
+
 
 
 
