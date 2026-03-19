@@ -12,7 +12,7 @@
 
 [Program-7 WAP using objects and classes to do reverse of 1-D Array](#ASSI-7)
 
-[Program-8 Write a class for implementation operation of matrix(3x3):  1.Transpose, 2.Sum, 3.Multiply, 4.Sum of Rows, 5.Sum of Column, 6.Sum of diagonal] (#ASSI-8)
+[Program-8 Write a class for implementation operation of matrix(3x3):  1.Transpose, 2.Sum, 3.Multiply, 4.Sum of Rows, 5.Sum of Column, 6.Sum of diagonal](#ASSI-8)
 
 
 
