@@ -32,7 +32,7 @@
 
 [PROGRAM 17:Matrix Addition using swing class.](#ASSI-17)
 
-[PROGRAM 18:Create one jframe apply 10 buttons on that after clicking on each button a new structure is created.(Circle, oval rectangle, etc ....)](#PROGRAM18)
+[PROGRAM 18:Create one jframe apply 10 buttons on that after clicking on each button a new structure is created.(Circle, oval rectangle, etc ....)](#ASSI-18)
 
 [PROGRAM 19:Just using mouse Event create a frame like paint brush with selection of colour and width.](#PROGRAM19)
 
