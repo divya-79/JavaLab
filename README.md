@@ -1126,6 +1126,229 @@ public class MatrixAdditionUI extends JFrame implements ActionListener {
 ```
 <img width="702" height="421" alt="image" src="https://github.com/user-attachments/assets/a5718f44-3738-4ccd-a58b-99922e3d247b" />
 
+## ASSI-18
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ShapeDrawer extends JFrame implements ActionListener {
+
+    String shape = "";
+    DrawPanel panel;
+
+    public ShapeDrawer() {
+        setTitle("Shape Drawer");
+        setSize(500, 400);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Panel for buttons
+        JPanel btnPanel = new JPanel(new GridLayout(2, 5, 8, 8));
+
+        String[] shapes = {
+            "Circle", "Oval", "Rectangle", "Square", "Line",
+            "Triangle", "Arc", "RoundRect", "3DRect", "Ellipse"
+        };
+
+        for (String s : shapes) {
+            JButton btn = new JButton(s);
+            btn.setFocusPainted(false);
+            btn.setBackground(new Color(60, 120, 180));
+            btn.setForeground(Color.WHITE);
+            btn.addActionListener(this);
+            btnPanel.add(btn);
+        }
+
+        // Drawing panel
+        panel = new DrawPanel();
+        panel.setBackground(Color.WHITE);
+
+        setLayout(new BorderLayout(10, 10));
+        add(btnPanel, BorderLayout.NORTH);
+        add(panel, BorderLayout.CENTER);
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        shape = e.getActionCommand();
+        panel.repaint();
+    }
+
+    // Custom panel for drawing
+    class DrawPanel extends JPanel {
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            g.setColor(Color.BLACK);
+
+            switch (shape) {
+                case "Circle":
+                    g.drawOval(150, 80, 100, 100);
+                    break;
+
+                case "Oval":
+                    g.drawOval(120, 80, 160, 100);
+                    break;
+
+                case "Rectangle":
+                    g.drawRect(120, 80, 160, 100);
+                    break;
+
+                case "Square":
+                    g.drawRect(150, 80, 100, 100);
+                    break;
+
+                case "Line":
+                    g.drawLine(100, 50, 300, 200);
+                    break;
+
+                case "Triangle":
+                    int x[] = {150, 250, 200};
+                    int y[] = {150, 150, 50};
+                    g.drawPolygon(x, y, 3);
+                    break;
+
+                case "Arc":
+                    g.drawArc(120, 80, 160, 100, 0, 180);
+                    break;
+
+                case "RoundRect":
+                    g.drawRoundRect(120, 80, 160, 100, 30, 30);
+                    break;
+
+                case "3DRect":
+                    g.draw3DRect(120, 80, 160, 100, true);
+                    break;
+
+                case "Ellipse":
+                    g.drawOval(130, 70, 140, 120);
+                    break;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new ShapeDrawer();
+    }
+}
+```
+<img width="851" height="676" alt="image" src="https://github.com/user-attachments/assets/5c13ea73-8622-4680-ab95-b07319394ea0" />
+
+## ASSI-19
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class PaintBrushApp extends JFrame {
+
+    Color currentColor = Color.BLACK;
+    int brushSize = 5;
+
+    DrawArea drawArea;
+
+    public PaintBrushApp() {
+
+        setTitle("Mini Paint Brush");
+        setSize(600, 450);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Top panel (controls)
+        JPanel topPanel = new JPanel();
+
+        // Color Button
+        JButton colorBtn = new JButton("Choose Color");
+        colorBtn.addActionListener(e -> {
+            Color newColor = JColorChooser.showDialog(this, "Select Color", currentColor);
+            if (newColor != null) currentColor = newColor;
+        });
+
+        // Brush size selector
+        String sizes[] = {"2", "5", "10", "15", "20"};
+        JComboBox<String> sizeBox = new JComboBox<>(sizes);
+        sizeBox.setSelectedIndex(1);
+        sizeBox.addActionListener(e -> {
+            brushSize = Integer.parseInt((String) sizeBox.getSelectedItem());
+        });
+
+        // Clear button
+        JButton clearBtn = new JButton("Clear");
+        clearBtn.addActionListener(e -> drawArea.clear());
+
+        topPanel.add(colorBtn);
+        topPanel.add(new JLabel("Brush Size:"));
+        topPanel.add(sizeBox);
+        topPanel.add(clearBtn);
+
+        // Drawing area
+        drawArea = new DrawArea();
+        drawArea.setBackground(Color.WHITE);
+
+        add(topPanel, BorderLayout.NORTH);
+        add(drawArea, BorderLayout.CENTER);
+
+        setVisible(true);
+    }
+
+    // Drawing Panel
+    class DrawArea extends JPanel implements MouseMotionListener {
+
+        Image image;
+        Graphics2D g2;
+
+        public DrawArea() {
+            addMouseMotionListener(this);
+        }
+
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+
+            if (image == null) {
+                image = createImage(getWidth(), getHeight());
+                g2 = (Graphics2D) image.getGraphics();
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                                    RenderingHints.VALUE_ANTIALIAS_ON);
+                clear();
+            }
+
+            g.drawImage(image, 0, 0, null);
+        }
+
+        public void clear() {
+            if (g2 != null) {
+                g2.setPaint(Color.WHITE);
+                g2.fillRect(0, 0, getWidth(), getHeight());
+                g2.setPaint(currentColor);
+                repaint();
+            }
+        }
+
+        public void mouseDragged(MouseEvent e) {
+            if (g2 != null) {
+                g2.setPaint(currentColor);
+                g2.setStroke(new BasicStroke(brushSize,
+                        BasicStroke.CAP_ROUND,
+                        BasicStroke.JOIN_ROUND));
+
+                g2.drawLine(e.getX(), e.getY(), e.getX(), e.getY());
+                repaint();
+            }
+        }
+
+        public void mouseMoved(MouseEvent e) {}
+    }
+
+    public static void main(String[] args) {
+        new PaintBrushApp();
+    }
+}
+```
+<img width="1026" height="758" alt="image" src="https://github.com/user-attachments/assets/d808218c-fe25-43f7-a8cb-7e3b26ba37f7" />
+
+
+
 
 
 
