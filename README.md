@@ -48,7 +48,7 @@
 
 [PROGRAM 25:Inheritance Programs, using interface.](#ASSI-25)
 
-[PROGRAM 25:Inheritance Programs, using abstract class.](#ASSI-26)
+[PROGRAM 26:Inheritance Programs, using abstract class.](#ASSI-26)
 
 
 
@@ -1521,6 +1521,38 @@ public class CharCopy {
 <img width="581" height="148" alt="image" src="https://github.com/user-attachments/assets/e02963a2-a25e-40d2-9d07-8e96cc30165d" />
 <img width="753" height="164" alt="image" src="https://github.com/user-attachments/assets/144ee987-6b8e-419c-a91e-56a60276d244" />
 <img width="801" height="136" alt="image" src="https://github.com/user-attachments/assets/f7eadcc0-a7dd-44a7-8c9f-eb504ad23eb3" />
+
+## ASSI-25
+```
+interface Vehicle {
+    void start();
+}
+
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car starts with key");
+    }
+}
+
+class Bike implements Vehicle {
+    public void start() {
+        System.out.println("Bike starts with kick");
+    }
+}
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        Car c = new Car();
+        Bike b = new Bike();
+
+        c.start();
+        b.start();
+    }
+}
+
+```
+<img width="579" height="170" alt="image" src="https://github.com/user-attachments/assets/7fcdf6f6-e9dc-4e96-b6c9-4e1ae6e763cb" />
+
 
 
 
