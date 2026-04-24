@@ -1124,6 +1124,8 @@ public class MatrixAdditionUI extends JFrame implements ActionListener {
     }
 }
 ```
+<img width="702" height="421" alt="image" src="https://github.com/user-attachments/assets/a5718f44-3738-4ccd-a58b-99922e3d247b" />
+
 
 
 
