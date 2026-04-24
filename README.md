@@ -1407,6 +1407,45 @@ public class MainProgram12 {
 <img width="890" height="258" alt="image" src="https://github.com/user-attachments/assets/fa5c9011-862e-4bd3-9837-9cb2515a4338" />
 <img width="640" height="100" alt="image" src="https://github.com/user-attachments/assets/d2716bc0-5929-4827-90f7-ee014bdcfc58" />
 
+## ASSI-22
+```
+public class ExceptionDemo {
+    public static void main(String[] args) {
+
+        // -------- ArrayIndexOutOfBoundsException --------
+        try {
+            int arr[] = new int[5];  // array of size 5
+
+            // Filling array
+            for (int i = 0; i < 5; i++) {
+                arr[i] = i * 10;
+            }
+
+            // Accessing invalid index (out of bounds)
+            System.out.println("Accessing 6th element: " + arr[5]);
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: You tried to access an index that does not exist in the array.");
+            System.out.println("Valid index range is 0 to 4 only.");
+        }
+
+        // -------- ArithmeticException --------
+        try {
+            int a = 10;
+            int b = 0;
+
+            int result = a / b;  // division by zero
+            System.out.println("Result: " + result);
+
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero is not allowed.");
+            System.out.println("Please provide a non-zero value for denominator.");
+        }
+    }
+}
+
+```
+<img width="806" height="188" alt="image" src="https://github.com/user-attachments/assets/47a47d3b-bf3a-4043-993e-ee3eadde3394" />
 
 
 
