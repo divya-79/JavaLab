@@ -1553,6 +1553,45 @@ public class InterfaceDemo {
 ```
 <img width="579" height="170" alt="image" src="https://github.com/user-attachments/assets/7fcdf6f6-e9dc-4e96-b6c9-4e1ae6e763cb" />
 
+## ASSI-26
+```
+abstract class Shape {
+    abstract void draw();  // abstract method
+
+    void display() {       // normal method
+        System.out.println("This is a shape");
+    }
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+class Rectangle extends Shape {
+    void draw() {
+        System.out.println("Drawing Rectangle");
+    }
+}
+
+public class AbstractDemo {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        Rectangle r = new Rectangle();
+
+        c.draw();
+        c.display();
+
+        r.draw();
+        r.display();
+    }
+}
+
+```
+<img width="594" height="205" alt="image" src="https://github.com/user-attachments/assets/b1a1c291-d6dd-472e-9b04-6cf4518c8fca" />
+
+
 
 
 
