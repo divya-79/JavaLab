@@ -30,7 +30,7 @@
 
 [PROGRAM 16:Make one calculator in swing.](#ASSI-16)
 
-[PROGRAM 17:Matrix Addition using swing class.](#PROGRAM17)
+[PROGRAM 17:Matrix Addition using swing class.](#ASSI-17)
 
 [PROGRAM 18:Create one jframe apply 10 buttons on that after clicking on each button a new structure is created.(Circle, oval rectangle, etc ....)](#PROGRAM18)
 
