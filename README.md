@@ -885,6 +885,59 @@ public class Main {
 <img width="1170" height="775" alt="image" src="https://github.com/user-attachments/assets/40af6795-5206-4552-875d-7ca6a89a18ac" />
 <img width="890" height="850" alt="image" src="https://github.com/user-attachments/assets/c684cc33-2271-40dd-b946-f2665ec927fa" />
 
+## ASSI-15
+```
+import javax.swing.*;
+import java.awt.event.*;
+
+public class AddSwing {
+    public static void main(String[] args) {
+
+        // Create frame
+        JFrame f = new JFrame("Addition");
+
+        // Create components
+        JLabel l1 = new JLabel("Enter first number:");
+        JLabel l2 = new JLabel("Enter second number:");
+        JTextField t1 = new JTextField();
+        JTextField t2 = new JTextField();
+        JButton b = new JButton("Add");
+
+        // Set positions
+        l1.setBounds(30, 30, 150, 30);
+        t1.setBounds(180, 30, 100, 30);
+
+        l2.setBounds(30, 80, 150, 30);
+        t2.setBounds(180, 80, 100, 30);
+
+        b.setBounds(100, 130, 80, 30);
+
+        // Add components to frame
+        f.add(l1);
+        f.add(t1);
+        f.add(l2);
+        f.add(t2);
+        f.add(b);
+
+        // Button action
+        b.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int a = Integer.parseInt(t1.getText());
+                int b1 = Integer.parseInt(t2.getText());
+                int sum = a + b1;
+
+                JOptionPane.showMessageDialog(f, "Sum = " + sum);
+            }
+        });
+
+        // Frame settings
+        f.setSize(350, 250);
+        f.setLayout(null);
+        f.setVisible(true);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
+```
 
 
 
