@@ -661,6 +661,169 @@ public class Main {
 ```
 <img width="836" height="537" alt="image" src="https://github.com/user-attachments/assets/2693fdbf-0d3a-46cd-9b2b-5191b77141b3" />
 
+## ASSI-12
+```
+import java.util.Scanner;
+
+class MatrixOperations {
+    int a[][], b[][], result[][];
+    int r, c;
+
+    // Input matrices
+    void input() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows and columns: ");
+        r = sc.nextInt();
+        c = sc.nextInt();
+
+        a = new int[r][c];
+        b = new int[r][c];
+        result = new int[r][c];
+
+        System.out.println("Enter elements of Matrix A:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Enter elements of Matrix B:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                b[i][j] = sc.nextInt();
+            }
+        }
+    }
+
+    // Display matrix
+    void display(int m[][]) {
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Addition of matrices
+    void addition() {
+        System.out.println("Addition of matrices:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                result[i][j] = a[i][j] + b[i][j];
+            }
+        }
+        display(result);
+    }
+
+    // Transpose of matrix A
+    void transpose() {
+        System.out.println("Transpose of Matrix A:");
+        for (int i = 0; i < c; i++) {
+            for (int j = 0; j < r; j++) {
+                System.out.print(a[j][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Sum of rows (Matrix A)
+    void sumRows() {
+        System.out.println("Sum of rows (Matrix A):");
+        for (int i = 0; i < r; i++) {
+            int sum = 0;
+            for (int j = 0; j < c; j++) {
+                sum += a[i][j];
+            }
+            System.out.println("Row " + (i + 1) + " = " + sum);
+        }
+    }
+
+    // Sum of columns (Matrix A)
+    void sumColumns() {
+        System.out.println("Sum of columns (Matrix A):");
+        for (int i = 0; i < c; i++) {
+            int sum = 0;
+            for (int j = 0; j < r; j++) {
+                sum += a[j][i];
+            }
+            System.out.println("Column " + (i + 1) + " = " + sum);
+        }
+    }
+
+    // Sum of diagonal elements (Matrix A)
+    void sumDiagonal() {
+        int sum = 0;
+        for (int i = 0; i < r && i < c; i++) {
+            sum += a[i][i];
+        }
+        System.out.println("Sum of diagonal elements = " + sum);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        MatrixOperations obj = new MatrixOperations();
+
+        obj.input();
+        System.out.println("\nMatrix A:");
+        obj.display(obj.a);
+
+        System.out.println("\nMatrix B:");
+        obj.display(obj.b);
+
+        obj.addition();
+        obj.transpose();
+        obj.sumRows();
+        obj.sumColumns();
+        obj.sumDiagonal();
+    }
+}
+```
+
+## ASSI-13
+```
+
+
+class A {
+    void print() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("A: " + i);
+        }
+    }
+}
+
+class B {
+    void print() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("B: " + i);
+        }
+    }
+}
+
+class C {
+    void print() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("C: " + i);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A a = new A();
+        B b = new B();
+        C c = new C();
+
+        a.print();
+        b.print();
+        c.print();
+    }
+}
+```
+
 
 
 
