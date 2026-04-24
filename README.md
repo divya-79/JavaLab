@@ -782,6 +782,8 @@ public class Main {
     }
 }
 ```
+<img width="1177" height="590" alt="image" src="https://github.com/user-attachments/assets/ccd2a5ca-c3fb-41e7-9ef2-120fad15adc0" />
+
 
 ## ASSI-13
 ```
