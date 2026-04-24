@@ -38,6 +38,16 @@
 
 [PROGRAM 20:Create a package of any 5 classes of your choice and import it.](#ASSI-20)
 
+[PROGRAM 21:Create one package and sub package  import and test it.](#ASSI-21)
+
+[PROGRAM 22:Create one small array of size 5 apply array out of bounds exception using try catch give a proper message in catch and demonstrate the exception exactly in the same fashion demonstrate arithmetic exception .](#ASSI-22)
+
+[PROGRAM 23:To test the range of age of one student.write a program using user defined exception.](#ASSI-23)
+
+[PROGRAM 24:File Handling Programs (given in the PPT)](#ASSI-24)
+
+[PROGRAM 25:Inheritance Programs, using interface and abstract classes.](#ASSI-25)
+
 
 
 
@@ -1377,6 +1387,26 @@ public class MainProgram1 {
 <img width="915" height="276" alt="image" src="https://github.com/user-attachments/assets/26d5f80c-b277-41c8-8a57-1546e50c2790" />
 <img width="934" height="357" alt="image" src="https://github.com/user-attachments/assets/c98eb887-6ce5-43ff-97db-526ea9ea42b7" />
 <img width="520" height="306" alt="image" src="https://github.com/user-attachments/assets/8f10f8fc-dc11-4d49-92ea-92f08d93bd61" />
+
+## ASSI-21
+```
+import mypack.MyClass1;
+import mypack.subpack.MyClass2;
+
+public class MainProgram12 {
+    public static void main(String[] args) {
+        MyClass1 obj1 = new MyClass1();
+        obj1.display();
+
+        MyClass2 obj2 = new MyClass2();
+        obj2.show();
+    }
+}
+```
+<img width="865" height="259" alt="image" src="https://github.com/user-attachments/assets/26498f37-af2d-40f2-98cb-c926628354f4" />
+<img width="890" height="258" alt="image" src="https://github.com/user-attachments/assets/fa5c9011-862e-4bd3-9837-9cb2515a4338" />
+<img width="640" height="100" alt="image" src="https://github.com/user-attachments/assets/d2716bc0-5929-4827-90f7-ee014bdcfc58" />
+
 
 
 
