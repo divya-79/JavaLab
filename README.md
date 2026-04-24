@@ -596,6 +596,72 @@ public class MainClass {
 ```
 <img width="701" height="434" alt="image" src="https://github.com/user-attachments/assets/aaab1d2c-b7e2-4a64-8352-3abfbf3c599d" />
 
+## ASSI-11
+```
+
+import java.util.Scanner;
+
+class ArrayOperations {
+    int arr[];
+    int size;
+
+    
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of array: ");
+        size = sc.nextInt();
+
+        arr = new int[size];
+
+        System.out.println("Enter elements:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+    }
+
+    
+    void output1() {
+        System.out.println("Array elements (Output1):");
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    
+    void output2() {
+        System.out.println("Array elements (Output2):");
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
+  
+    void reverse() {
+        System.out.println("Array in reverse:");
+        for (int i = size - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayOperations obj = new ArrayOperations();
+
+        obj.input();
+        obj.output1();
+        obj.output2();
+        obj.reverse();
+    }
+}
+```
+<img width="599" height="384" alt="image" src="https://github.com/user-attachments/assets/77fa119a-4a9c-40b0-8681-29153f2777d9" />
+
+
 
 
 
