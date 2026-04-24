@@ -1040,6 +1040,8 @@ public class Calculator implements ActionListener {
     }
 }
 ```
+<img width="522" height="569" alt="image" src="https://github.com/user-attachments/assets/7ae59c9c-6951-4a50-9dbf-1001543363bb" />
+
 
 
 
