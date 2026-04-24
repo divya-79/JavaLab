@@ -18,6 +18,17 @@
 
 [Program-10 Demonstrate all 3 types of inheritance 1. Single, 2. Multilevel, 3. Hierarchial](#ASSI-10)
 
+[PROGRAM 11:Write a class that is having four method for 1-dimensional array. (Input, output 1,out2, reverse).](#ASSI-11)
+
+[PROGRAM 12:write a class with multiple methods to perform matrix operations (transpose, addition, sum of rows, sum of columns, sum of diagonal).](#ASSI-12)
+
+[PROGRAM 13 Write a program using three classes to print 1-100 ,1-100,1-100 with and without thread and analyse the output and repeat the same program using runnable interface.](#ASSI-13)
+
+[PROGRAM 13  Using the concept of multithreading the output of all three threads must be synchronised (use join method).](#PROGRAM13)
+
+[PROGRAM 14 Addition of 2 numbers using swing.](#PROGRAM14)
+
+
 
 
 ## ASSI-1
