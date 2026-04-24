@@ -46,7 +46,9 @@
 
 [PROGRAM 24:File Handling Programs (given in the PPT)](#ASSI-24)
 
-[PROGRAM 25:Inheritance Programs, using interface and abstract classes.](#ASSI-25)
+[PROGRAM 25:Inheritance Programs, using interface.](#ASSI-25)
+
+[PROGRAM 25:Inheritance Programs, using abstract class.](#ASSI-26)
 
 
 
