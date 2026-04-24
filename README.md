@@ -1347,6 +1347,36 @@ public class PaintBrushApp extends JFrame {
 ```
 <img width="1026" height="758" alt="image" src="https://github.com/user-attachments/assets/d808218c-fe25-43f7-a8cb-7e3b26ba37f7" />
 
+## ASSI-20
+```
+
+import MyPack.*;  
+
+public class MainProgram1 {
+    public static void main(String[] args) {
+
+        Add a = new Add();
+        Subtract s = new Subtract();
+        Multiply m = new Multiply();
+        Divide d = new Divide();
+        Square sq = new Square();
+
+        System.out.println("Addition: " + a.add(10, 5));
+        System.out.println("Subtraction: " + s.sub(10, 5));
+        System.out.println("Multiplication: " + m.mul(10, 5));
+        System.out.println("Division: " + d.div(10, 5));
+        System.out.println("Square: " + sq.sq(5));
+    }
+}
+```
+<img width="824" height="349" alt="image" src="https://github.com/user-attachments/assets/6f85f590-8a9e-4b88-ba88-b8b54489d822" />
+<img width="1059" height="355" alt="image" src="https://github.com/user-attachments/assets/eaf0c73a-5fd8-4ca2-b44c-b1702f1208b3" />
+<img width="722" height="303" alt="image" src="https://github.com/user-attachments/assets/b3046d8e-2c9f-4390-8748-9e089cb505c9" />
+<img width="915" height="276" alt="image" src="https://github.com/user-attachments/assets/26d5f80c-b277-41c8-8a57-1546e50c2790" />
+<img width="934" height="357" alt="image" src="https://github.com/user-attachments/assets/c98eb887-6ce5-43ff-97db-526ea9ea42b7" />
+<img width="520" height="306" alt="image" src="https://github.com/user-attachments/assets/8f10f8fc-dc11-4d49-92ea-92f08d93bd61" />
+
+
 
 
 
