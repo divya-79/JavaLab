@@ -1042,6 +1042,89 @@ public class Calculator implements ActionListener {
 ```
 <img width="522" height="569" alt="image" src="https://github.com/user-attachments/assets/7ae59c9c-6951-4a50-9dbf-1001543363bb" />
 
+## ASSI-17
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class MatrixAdditionUI extends JFrame implements ActionListener {
+
+    JTextField[][] m1 = new JTextField[2][2];
+    JTextField[][] m2 = new JTextField[2][2];
+    JTextField[][] result = new JTextField[2][2];
+    JButton addBtn;
+
+    public MatrixAdditionUI() {
+
+        setTitle("Matrix Addition");
+        setSize(420, 250);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Main panel
+        JPanel mainPanel = new JPanel(new GridLayout(1, 3, 15, 10));
+
+        // Matrix Panels
+        mainPanel.add(createMatrixPanel("Matrix A", m1));
+        mainPanel.add(createMatrixPanel("Matrix B", m2));
+        mainPanel.add(createMatrixPanel("Result", result));
+
+        // Button panel
+        JPanel btnPanel = new JPanel();
+        addBtn = new JButton("Add Matrices");
+        addBtn.setFocusPainted(false);
+        addBtn.setBackground(new Color(70, 130, 180));
+        addBtn.setForeground(Color.WHITE);
+        addBtn.setFont(new Font("Arial", Font.BOLD, 12));
+        addBtn.addActionListener(this);
+        btnPanel.add(addBtn);
+
+        // Layout set
+        setLayout(new BorderLayout(10, 10));
+        add(mainPanel, BorderLayout.CENTER);
+        add(btnPanel, BorderLayout.SOUTH);
+
+        setVisible(true);
+    }
+
+    // Method to create matrix panel
+    private JPanel createMatrixPanel(String title, JTextField[][] matrix) {
+        JPanel panel = new JPanel();
+        panel.setBorder(BorderFactory.createTitledBorder(title));
+        panel.setLayout(new GridLayout(2, 2, 5, 5));
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                matrix[i][j] = new JTextField(2); // smaller box
+                matrix[i][j].setHorizontalAlignment(JTextField.CENTER);
+                matrix[i][j].setFont(new Font("Arial", Font.BOLD, 14));
+                panel.add(matrix[i][j]);
+            }
+        }
+        return panel;
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        try {
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 2; j++) {
+                    int a = Integer.parseInt(m1[i][j].getText());
+                    int b = Integer.parseInt(m2[i][j].getText());
+                    result[i][j].setText(String.valueOf(a + b));
+                }
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Enter valid numbers!");
+        }
+    }
+
+    public static void main(String[] args) {
+        new MatrixAdditionUI();
+    }
+}
+```
+
 
 
 
