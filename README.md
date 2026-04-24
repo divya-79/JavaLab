@@ -1447,6 +1447,47 @@ public class ExceptionDemo {
 ```
 <img width="806" height="188" alt="image" src="https://github.com/user-attachments/assets/47a47d3b-bf3a-4043-993e-ee3eadde3394" />
 
+## ASSI-23
+```
+import java.util.Scanner;
+
+// User-defined exception class
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+public class AgeValidation {
+    
+    // Method to check age
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18 || age > 25) {
+            throw new InvalidAgeException("Age must be between 18 and 25 for a student.");
+        } else {
+            System.out.println("Valid age. Student is eligible.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter student's age: ");
+        int age = sc.nextInt();
+
+        try {
+            checkAge(age);
+        } catch (InvalidAgeException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        sc.close();
+    }
+}
+```
+<img width="490" height="93" alt="image" src="https://github.com/user-attachments/assets/015c2a49-951c-4ab0-98c4-37254e273c17" />
+
+
 
 
 
