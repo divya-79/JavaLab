@@ -26,7 +26,7 @@
 
 [PROGRAM 14  Using the concept of multithreading the output of all three threads must be synchronised (use join method).](#ASSI-14)
 
-[PROGRAM 14 Addition of 2 numbers using swing.](#PROGRAM14)
+[PROGRAM 15 Addition of 2 numbers using swing.](#ASSI-15)
 
 
 
