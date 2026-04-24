@@ -835,8 +835,59 @@ public class Main {
 <img width="1173" height="721" alt="image" src="https://github.com/user-attachments/assets/f5dc1e1a-f685-44ce-a0b6-54e67d66158f" />
 <img width="1192" height="714" alt="image" src="https://github.com/user-attachments/assets/66859fc4-2f26-4569-95b3-cd660c249d1c" />
 <img width="1170" height="775" alt="image" src="https://github.com/user-attachments/assets/40af6795-5206-4552-875d-7ca6a89a18ac" />
+<img width="890" height="850" alt="image" src="https://github.com/user-attachments/assets/c684cc33-2271-40dd-b946-f2665ec927fa" />
 
-<img width="781" height="818" alt="image" src="https://github.com/user-attachments/assets/24eaf49d-cce8-4f1d-8bd9-08ccd406c4c8" />
+## ASSI-14
+```
+class MyThread extends Thread {
+    String name;
+
+    MyThread(String name) {
+        this.name = name;
+    }
+
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(name + ": " + i);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            MyThread t1 = new MyThread("A");
+            MyThread t2 = new MyThread("B");
+            MyThread t3 = new MyThread("C");
+
+            t1.start();
+            t1.join();   // wait until t1 finishes
+
+            t2.start();
+            t2.join();   // wait until t2 finishes
+
+            t3.start();
+            t3.join();   // wait until t3 finishes
+
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+<img width="1172" height="779" alt="image" src="https://github.com/user-attachments/assets/f6975565-84a6-4a08-85b5-52f0b2e4e6e1" />
+<img width="1176" height="753" alt="image" src="https://github.com/user-attachments/assets/069b5acf-5f11-424f-8866-9c5954aaddb3" />
+
+<img width="1205" height="783" alt="image" src="https://github.com/user-attachments/assets/2d4775de-7a65-4a03-8869-0e09c6a36966" />
+<img width="1180" height="731" alt="image" src="https://github.com/user-attachments/assets/db06c5ad-7f89-4d56-8a10-9bfcc95b5762" />
+<img width="1173" height="721" alt="image" src="https://github.com/user-attachments/assets/f5dc1e1a-f685-44ce-a0b6-54e67d66158f" />
+<img width="1192" height="714" alt="image" src="https://github.com/user-attachments/assets/66859fc4-2f26-4569-95b3-cd660c249d1c" />
+<img width="1170" height="775" alt="image" src="https://github.com/user-attachments/assets/40af6795-5206-4552-875d-7ca6a89a18ac" />
+<img width="890" height="850" alt="image" src="https://github.com/user-attachments/assets/c684cc33-2271-40dd-b946-f2665ec927fa" />
+
+
+
+
 
 
 
