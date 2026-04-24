@@ -1487,6 +1487,39 @@ public class AgeValidation {
 ```
 <img width="490" height="93" alt="image" src="https://github.com/user-attachments/assets/015c2a49-951c-4ab0-98c4-37254e273c17" />
 
+## ASSI-24
+```
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class CharCopy {
+    public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("input.txt");
+            FileWriter fw = new FileWriter("output.txt");
+
+            int ch;
+            while ((ch = fr.read()) != -1) {
+                fw.write(ch);
+            }
+
+            System.out.println("File copied successfully (character by character).");
+
+            fr.close();
+            fw.close();
+
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+
+```
+<img width="581" height="148" alt="image" src="https://github.com/user-attachments/assets/e02963a2-a25e-40d2-9d07-8e96cc30165d" />
+<img width="753" height="164" alt="image" src="https://github.com/user-attachments/assets/144ee987-6b8e-419c-a91e-56a60276d244" />
+<img width="801" height="136" alt="image" src="https://github.com/user-attachments/assets/f7eadcc0-a7dd-44a7-8c9f-eb504ad23eb3" />
+
 
 
 
